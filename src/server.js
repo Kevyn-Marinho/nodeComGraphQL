@@ -7,4 +7,4 @@ const server = new GraphQLServer({
     resolvers
 });
 
-server.start();
+server.start(() => console.log("Está rodando em http://localhost:4000/"));
