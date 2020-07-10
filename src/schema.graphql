@@ -4,6 +4,12 @@ type Product {
     price: Float!
 }
 
+input inputProduct {
+    id: Int
+    name: String!
+    price: Float!
+}
+
 type Query {
     products: [Product!]!
     product (id: ID!): Product
@@ -11,4 +17,5 @@ type Query {
 
 type Mutation {
     createProduct(name: String!, price: Float!) : Product
+    updateProduct(data: inputProduct!) : Product
 }
